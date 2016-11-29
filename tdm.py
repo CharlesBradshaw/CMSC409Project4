@@ -7,9 +7,9 @@ stopFile = "stop_words.txt"
 sentenceFile = "sentences.txt"
 
 
-def getSetFromFile(filename):
+def getSetFromFile(filename = sentenceFile):
 	with open(filename) as f:
-    		return  set(f.read().splitlines())
+    		return f.read().splitlines()
 
 
 def trimString(s):
