@@ -5,7 +5,10 @@ TRIES = 30
 ITERS = 20
 
 def sqdist(a, b):
-    dist = sum((x-y)**2 for x,y in zip(a, b))
+    dist = 0
+    for x,y in zip(a,b):
+        d = x-y
+        dist += d*d
     return dist
 
 def kMIter(vectors, k):
