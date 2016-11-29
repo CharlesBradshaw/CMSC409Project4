@@ -31,7 +31,6 @@ def getSentences():
 	sentences = getSetFromFile(sentenceFile)
 
 	trimmedSentences = []
-	print type(sentences)
 
 	for s in sentences:
 		nextLine = []
@@ -50,8 +49,6 @@ def sentencesToVector(sentences,uniques):
 		vector = [0 for x in range(len(uniques))]
 		for w in s:
 			vector[uniques[w]]+=1
-			print w
-		print "\n"
 		ret.append(vector)
 
 	return ret

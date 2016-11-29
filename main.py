@@ -3,7 +3,6 @@ import tdm
 from cluster import kMeans
 sentences = tdm.getSentences()
 uniques = tdm.getUniqueWords(sentences)
-print "sentences", sentences
 vectors = tdm.sentencesToVector(sentences,uniques)
 print vectors
 def invlook(dd, val):
